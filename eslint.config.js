@@ -9,7 +9,7 @@ import tsParser from '@typescript-eslint/parser';
 export default [
   { ignores: ['dist'] },
   {
-    files: ["**/*.ts", "**/*.tsx"], // Aseguramos que ESLint procese archivos TypeScript y React
+    files: ["**/*.ts", "**/*.tsx"], 
     languageOptions: {
       ecmaVersion: 2020,
       sourceType: 'module',

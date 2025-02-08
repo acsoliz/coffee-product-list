@@ -1,13 +1,14 @@
-/**
- * The main application component that sets up the product state context and renders the CoffeeProductView component.
+/**************************************************************************
+ * The main application component that sets up the product state context
+ * and renders the CoffeeProductView component.
  *
  * @returns {React.FC} The main application component.
- */
+ **************************************************************************/
 
-import React from "react";
-import { CoffeeProductView } from "./views";
-import { ProductStateContext } from "./state/ProductStateContext";
-import { useLoadProducts } from "./hooks";
+import React from 'react';
+import { CoffeeProductView } from './views';
+import { ProductStateContext } from './state/ProductStateContext';
+import { useLoadProducts } from './hooks';
 
 const App: React.FC = () => {
   const productState = useLoadProducts();
@@ -16,7 +17,7 @@ const App: React.FC = () => {
       <div className="min-h-screen text-gray-900 bg-blue-500">
         <CoffeeProductView />
       </div>
-    </ProductStateContext.Provider >
+    </ProductStateContext.Provider>
   );
 };
 

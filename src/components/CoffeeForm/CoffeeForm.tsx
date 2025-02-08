@@ -1,24 +1,24 @@
-import { Button, Form, Input, InputNumber, Card } from "antd";
-import { Product } from "../../models/Product";
-import React from "react";
-
+import React from 'react';
+import { Button, Form, Input, InputNumber, Card } from 'antd';
+import { Product } from '@/src/models/Product';
 
 interface CoffeeFormProps {
   onSave: (values: Omit<Product, 'id'>) => void;
   editingProduct?: Product;
 }
 
-
-export const CoffeeForm: React.FC<CoffeeFormProps> = ({ onSave, editingProduct }) => {
+export const CoffeeForm: React.FC<CoffeeFormProps> = ({
+  onSave,
+  editingProduct,
+}) => {
   const [form] = Form.useForm<Omit<Product, 'id'>>();
-
 
   // Resetear el formulario cuando cambia el producto a editar
   React.useEffect(() => {
     if (editingProduct) {
       form.setFieldsValue(editingProduct);
     } else {
-      form.resetFields(); 
+      form.resetFields();
     }
   }, [editingProduct, form]);
 
@@ -39,7 +39,7 @@ export const CoffeeForm: React.FC<CoffeeFormProps> = ({ onSave, editingProduct }
         <Form.Item
           label="Name"
           name="name"
-          rules={[{ required: true, message: "Please enter the product name" }]}
+          rules={[{ required: true, message: 'Please enter the product name' }]}
         >
           <Input placeholder="Name" />
         </Form.Item>
@@ -47,7 +47,9 @@ export const CoffeeForm: React.FC<CoffeeFormProps> = ({ onSave, editingProduct }
         <Form.Item
           label="Description"
           name="description"
-          rules={[{ required: true, message: "Please enter the product description" }]}
+          rules={[
+            { required: true, message: 'Please enter the product description' },
+          ]}
         >
           <Input placeholder="Description" />
         </Form.Item>
@@ -55,22 +57,26 @@ export const CoffeeForm: React.FC<CoffeeFormProps> = ({ onSave, editingProduct }
         <Form.Item
           label="Price"
           name="price"
-          rules={[{ required: true, message: "Please enter the product price" }]}
+          rules={[
+            { required: true, message: 'Please enter the product price' },
+          ]}
         >
-          <InputNumber placeholder="Price" style={{ width: "100%" }} />
+          <InputNumber placeholder="Price" style={{ width: '100%' }} />
         </Form.Item>
 
         <Form.Item
           label="Image URL"
           name="imageUrl"
-          rules={[{ required: true, message: 'Please enter the product image URL' }]}
+          rules={[
+            { required: true, message: 'Please enter the product image URL' },
+          ]}
         >
           <Input placeholder="Image URL" />
         </Form.Item>
 
-        <Form.Item >
+        <Form.Item>
           <Button type="primary" htmlType="submit" data-testid="submit-button">
-            {editingProduct ? "Update" : "Add"} Product
+            {editingProduct ? 'Update' : 'Add'} Product
           </Button>
         </Form.Item>
       </Form>

@@ -1,11 +1,11 @@
+/************************************
+ * Custom hook to access global state
+*************************************/
+
 import { createContext, useContext } from "react";
 import { ProductState } from "../models/ProductState";
 
 export const ProductStateContext = createContext<ProductState | null>(null);
-
-/*
- * Custom hook to access global state
-*/
 export const useProductState = () => {
   const context = useContext(ProductStateContext);
   if (!context) {

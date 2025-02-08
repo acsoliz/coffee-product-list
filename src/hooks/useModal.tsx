@@ -1,6 +1,5 @@
-// src/hooks/useModal.ts
-import { useState } from "react";
-import { Product } from "../models/Product";
+import { useState } from 'react';
+import { Product } from '../models/Product';
 
 export const useModal = () => {
   const [isModalVisible, setIsModalVisible] = useState(false);
