@@ -66,37 +66,37 @@ Main components, hooks and views are tested to ensure correct execution of the a
 - **Main view test**
   - ✔ Render without errors
 
-## Cómo Ejecutar el Proyecto
+## How to Execute the Project
 
-### Clonar el Repositorio
+### Clone the Repository
 
 ```sh
 git clone https://github.com/acsoliz/coffee-product-list.git
 
 ```
 
-### Acceder a la carpeta del proyecto
+### Access the project folder
 
 ```sh 
 cd coffee-product-list
 
 ```
 
-### Instalar Dependencias
+### Install Dependencies
 
 ```sh
 npm install
 
 ```
 
-### Ejecutar en Modo Desarrollo
+### Run in Development Mode
 
 ```sh
 npm run dev
 
 ```
 
-### Ejecutar Pruebas
+### Run tests
 
 ```sh
 npm run test
