@@ -34,7 +34,7 @@ export const CoffeeProductView: React.FC = () => {
   };
 
   return (
-    <>
+    <div className="p-4 w-full min-h-screen bg-gray-800">
       <CoffeeProductHeader onAddProduct={showModal} />
 
       <Modal
@@ -54,6 +54,6 @@ export const CoffeeProductView: React.FC = () => {
         onEdit={handleEdit}
         onDelete={(id) => deleteProduct(id)}
       />
-    </>
+    </div>
   );
 };

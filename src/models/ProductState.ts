@@ -7,4 +7,5 @@ export interface ProductState {
   deleteProduct: (id: string) => void;
   loadProducts: () => void;
   saveProducts: () => void;
+  saveDefaultProducts: () => void;
 }
