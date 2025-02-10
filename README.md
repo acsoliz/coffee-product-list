@@ -43,7 +43,7 @@ Zustand manages the product list efficiently and allows easy expansion for futur
 - **React Testing Library**: User interaction simulation.
 
 
-### Testing Startegy
+### Testing Strategy
 The main components, hooks, and views are tested to ensure the application functions correctly and to prevent unexpected errors. This includes testing the rendering of components, the functionality of hooks, and the overall behavior of views.
 
 
